@@ -17,9 +17,10 @@
 | `11-diagnosis-hero-1440.png` | 桌面端诊断头图 |
 | `12-week-resource-1440.png` | 桌面端本周资源面板 |
 | `qr-live.png` | 课堂扫码二维码（1080px 品牌色），指向当前临时公网链接 |
+| `qr-permanent.png` | **永久二维码**，指向 GitHub Pages 站点，PPT 提交版用这张 |
 | `live-url.txt` | 当前临时公网链接与生成时间 |
 
-`qr-live.png` 与 `live-url.txt` 是动态素材：由 `npm run share:live` 重新生成，演示进程停止后链接失效。
+`qr-permanent.png` 长期有效；`qr-live.png` 与 `live-url.txt` 是动态素材：由 `npm run share:live` 重新生成，演示进程停止后链接失效。
 
 移动端素材为 2 倍像素密度截图（780px 级别），分享卡为 1080px 宽导出图。
 

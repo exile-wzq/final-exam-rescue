@@ -8,7 +8,6 @@ screenshots
 .DS_Store
 *.tsbuildinfo
 scripts/bin/
-scripts/.gh-config/
-scripts/.live-session.json
+scripts/.*
 marketing-assets/qr-live.png
 marketing-assets/live-url.txt

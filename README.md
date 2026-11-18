@@ -258,7 +258,17 @@ node scripts/verify-desktop.mjs
 node scripts/export-marketing-assets.mjs
 ```
 
-## 课堂扫码演示（临时公网链接）
+## 永久托管（GitHub Pages）
+
+- 站点：<https://exile-wzq.github.io/final-exam-rescue/>（长期有效，演示当天无需启动本机服务）
+- 仓库：<https://github.com/exile-wzq/final-exam-rescue>（公开，免费版 Pages 要求）
+- 部署：`.github/workflows/deploy.yml`。推送 main 后 GitHub Actions 自动构建并发布，约 1 分钟生效
+- 永久二维码：`marketing-assets/qr-permanent.png`（1080px 品牌色）。链接不变则二维码永远不用换
+- 更新流程：改代码 → `npm test` → `git add -A && git commit && git push` → 等 Actions 变绿 → 站点自动更新
+- 本机环境备注（均为仓库级配置，不影响系统）：gh 配置目录在 `scripts/.gh-config`（调用 gh 时需设 `GH_CONFIG_DIR` 指向它）；git 凭据助手指向仓库内 gh；`.git/config` 以空值覆盖全局失效代理（127.0.0.1:7890）
+- 自检：`node scripts/verify-live.mjs https://exile-wzq.github.io/final-exam-rescue/`（微信 UA + 截图）
+
+## 课堂扫码演示（临时公网链接，备用）
 
 一条命令把本机产品发布为临时 https 公网链接，并生成品牌色二维码，台下微信扫码关注即开：
 
